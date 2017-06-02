@@ -1,0 +1,14 @@
+version: "2"
+services:
+  dns:
+    build: .
+    ports:
+      - "53:53/udp"
+      - "53:53/tcp"
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+    extra_hosts:
+      - "example.dev:93.184.216.34"
+    cap_add:
+      - NET_ADMIN
