@@ -5,6 +5,7 @@ services:
     ports:
       - "53:53/udp"
       - "53:53/tcp"
+    restart: always
     dns:
       - 8.8.8.8
       - 8.8.4.4
